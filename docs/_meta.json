@@ -1,16 +1,22 @@
 [
   {
-    "text": "Guide",
-    "link": "/guide/",
-    "activeMatch": "/guide/"
+    "text": "Python",
+    "link": "/python/",
+    "activeMatch": "/python/"
   },
   {
-    "text": "Hello World",
-    "link": "/hello/",
-    "activeMatch": "/hello/"
+    "text": "Rust",
+    "link": "/rust/",
+    "activeMatch": "/rust/"
   },
   {
-    "text": "API",
-    "link": "https://rspress.dev/api/index.html"
+    "text": "React",
+    "link": "/react/",
+    "activeMatch": "/react/"
+  },
+  {
+    "text": "WASM",
+    "link": "/wasm/",
+    "activeMatch":"/wasm/"
   }
 ]

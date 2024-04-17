@@ -5,14 +5,10 @@ export default defineConfig({
   root: path.join(__dirname, 'docs'),
   title: 'jennier',
   description: 'personal blogs',
-  icon: '/rspress-icon.png',
-  logo: {
-    light: '/rspress-light-logo.png',
-    dark: '/rspress-dark-logo.png',
-  },
+  icon: './docs/public/avatar.ico',
   themeConfig: {
     socialLinks: [
-      { icon: 'github', mode: 'link', content: 'https://github.com/web-infra-dev/rspress' },
+      { icon: 'github', mode: 'link', content: 'https://github.com/jennier0107'},
     ],
   },
 });
