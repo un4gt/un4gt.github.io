@@ -17,3 +17,7 @@ language = 'zh_CN'
 
 html_theme = 'sphinx_material'
 html_static_path = ['_static']
+html_title = 'jennier的编程随记'
+html_short_title = 'jennier的编程随记'
+
+html_show_sourcelink = False
