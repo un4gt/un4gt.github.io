@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to jennier的编程随记's documentation!
+欢迎来到 jennier的编程随记
 =============================================
 
 .. toctree::

@@ -9,16 +9,26 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v4
-    - name: Build HTML
-      uses: ammaraskar/sphinx-action@master
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
+    - name: Setup PDM
+      uses: pdm-project/setup-pdm@v4
+    - name: Install dependencies
+      run: pdm install -G doc
+    - name: Make html
+      run: pdm run docs
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
       with:
-        name: html-docs
-        path: docs/_build/html/
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_build/html
+        path: docs/_build/html
+
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
