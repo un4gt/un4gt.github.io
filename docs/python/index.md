@@ -1,3 +1,0 @@
-# Pyhton
-
-On the way

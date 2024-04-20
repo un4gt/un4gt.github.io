@@ -1,3 +1,0 @@
-# Rust
-
-On the way
