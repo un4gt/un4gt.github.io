@@ -11,8 +11,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
-      with:
-        docs-folder: "docs/"
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -23,4 +21,4 @@ jobs:
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/build/htm
+        publish_dir: docs/build/html

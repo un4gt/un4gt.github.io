@@ -10,9 +10,9 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [tool.pdm.scripts]
-docs = {shell = "cd docs && make html"}  # build sphinx docs
+docs = {shell = "make html"}  # build sphinx docs
 docs_export = { shell = "pdm export -G doc -o requirements.txt --without-hashes" }  # export requirements for docs
-docs_preview = {shell = 'python -m http.server -d docs\build\html'}
+docs_preview = {shell = 'python -m http.server -d _build\html'}
 
 [project.optional-dependencies]
 doc = [
