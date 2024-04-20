@@ -6,6 +6,7 @@ authors = [
     {name = "jennier0107", email = "mt3085570450@outlook.com"},
 ]
 dependencies = []
+requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
