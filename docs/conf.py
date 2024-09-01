@@ -8,6 +8,7 @@ author = 'un4gt'
 extensions = [
     "sphinxcontrib_del_marker",
     "sphinx_tabs.tabs",
+    "sphinxcontrib_analytics"
 ]
 
 templates_path = ['_templates']
@@ -26,3 +27,6 @@ html_title = 'un4gt的编程随记'
 html_short_title = 'un4gt的编程随记'
 
 html_show_sourcelink = False
+
+analytics_with = 'baidu'
+analytics_id = '37c9f06a6b652cc479be7a02e861ad8f'

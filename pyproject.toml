@@ -11,16 +11,20 @@ requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
+[tool.pdm]
+distribution = false
 [tool.pdm.scripts]
 docs = {shell = "cd docs && make html -e"}  # build sphinx docs
 docs_p = {shell = 'python -m http.server -d docs/_build/html'}
 
+[tool.pdm.dev-dependencies]
+dev = [
+]
 [project.optional-dependencies]
 doc = [
     "sphinx>=7.3.7",
     "sphinxawesome-theme>=5.2.0",
     "sphinxcontrib-del-marker>=0.1.2",
     "sphinx-tabs>=3.4.5",
+    "sphinxcontrib-analytics-hub>=0.0.2",
 ]
-[tool.pdm]
-distribution = false

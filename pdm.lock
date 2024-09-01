@@ -2,10 +2,10 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default", "doc"]
+groups = ["default", "doc", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:e0060f9ee5ef0c714f3a7ea7e7e2ab42e6d376b0e3b8cc1a6872c1676743e0a7"
+content_hash = "sha256:9bc87fd108ba26dad55153c6d2aeb00234d94231d5d5db4ff53cb5e72e0ebdcf"
 
 [[package]]
 name = "alabaster"
@@ -277,6 +277,20 @@ dependencies = [
 files = [
     {file = "sphinxawesome_theme-5.2.0-py3-none-any.whl", hash = "sha256:56f1462f4ec4a5d66017819de6b7965a394d4157117bf12f029e7818d6789525"},
     {file = "sphinxawesome_theme-5.2.0.tar.gz", hash = "sha256:c24f1e5c0b9e475380d16fc5f1f3bfd84955817da0905d95f7e20809d7cd3c5d"},
+]
+
+[[package]]
+name = "sphinxcontrib-analytics-hub"
+version = "0.0.2"
+requires_python = ">=3.11"
+summary = "Sphinx extension for googleanalytics and baiduanalytics"
+groups = ["doc"]
+dependencies = [
+    "sphinx>=7.3.7",
+]
+files = [
+    {file = "sphinxcontrib_analytics_hub-0.0.2-py3-none-any.whl", hash = "sha256:4f23b3091687bacee3502b786eea2673263d32cfc621c874a73fdae1b5fdff88"},
+    {file = "sphinxcontrib_analytics_hub-0.0.2.tar.gz", hash = "sha256:c7534c0d4f67c3863af0217e76df0615a90ad032f7fcde81f33b784c35b8d588"},
 ]
 
 [[package]]
