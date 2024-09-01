@@ -76,3 +76,4 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
    rust/index
    wasm/index
    daily/index
+   articles_videos/index
