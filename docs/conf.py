@@ -8,7 +8,8 @@ author = 'un4gt'
 extensions = [
     "sphinxcontrib_del_marker",
     "sphinx_tabs.tabs",
-    "sphinxcontrib_analytics_hub"
+    "sphinxcontrib_analytics_hub",
+    "sphinx_design"
 ]
 
 templates_path = ['_templates']
