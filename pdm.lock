@@ -5,7 +5,7 @@
 groups = ["default", "doc", "dev"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:9bc87fd108ba26dad55153c6d2aeb00234d94231d5d5db4ff53cb5e72e0ebdcf"
+content_hash = "sha256:ba50d016e83dda99a918d9d5ca6004a5b933067efc205ace5511b3024fa33a16"
 
 [[package]]
 name = "alabaster"
@@ -246,6 +246,20 @@ dependencies = [
 files = [
     {file = "sphinx-7.3.7-py3-none-any.whl", hash = "sha256:413f75440be4cacf328f580b4274ada4565fb2187d696a84970c23f77b64d8c3"},
     {file = "sphinx-7.3.7.tar.gz", hash = "sha256:a4a7db75ed37531c05002d56ed6948d4c42f473a36f46e1382b0bd76ca9627bc"},
+]
+
+[[package]]
+name = "sphinx-design"
+version = "0.6.1"
+requires_python = ">=3.9"
+summary = "A sphinx extension for designing beautiful, view size responsive web components."
+groups = ["doc"]
+dependencies = [
+    "sphinx<9,>=6",
+]
+files = [
+    {file = "sphinx_design-0.6.1-py3-none-any.whl", hash = "sha256:b11f37db1a802a183d61b159d9a202314d4d2fe29c163437001324fe2f19549c"},
+    {file = "sphinx_design-0.6.1.tar.gz", hash = "sha256:b44eea3719386d04d765c1a8257caca2b3e6f8421d7b3a5e742c0fd45f84e632"},
 ]
 
 [[package]]
