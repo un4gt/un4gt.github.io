@@ -62,10 +62,11 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
 
 - :octicon:`package` `pydumpling`_
 - :octicon:`package` `BiliFM`_
+- :octicon:`package` `APIFlask`_
 
 .. _pydumpling: https://github.com/cocolato/pydumpling
 .. _BiliFM: https://github.com/jingfelix/BiliFM
-
+.. _APIFlask: https://github.com/apiflask/apiflask
 
 
 其他站点
