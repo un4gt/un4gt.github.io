@@ -14,9 +14,11 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
 最近动态
 ----------
 
--  :octicon:`git-pull-request` [APIFlask] `Add flag to allow disabling of validation on input(issue 573)`_
+- :octicon:`sync` [pydumpling] `Provides a GUI interface that allows users to simply view information about the call stack`_
 
-- :octicon:`git-branch` [Fine Weather] `添加 EmojiReaction 组件`
+- .. del:: :octicon:`git-merge` [APIFlask] `Add flag to allow disabling of validation on input(issue 573)`_
+
+- :octicon:`sync` [Fine Weather] `添加 EmojiReaction 组件`
 
 - .. del:: 忙着毕业论文+毕设
 
@@ -28,6 +30,7 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
 
 .. _Flasky-Cli: https://github.com/un4gt/flasky-cli
 .. _Add flag to allow disabling of validation on input(issue 573): https://github.com/apiflask/apiflask/pull/615
+.. _Provides a GUI interface that allows users to simply view information about the call stack: https://github.com/cocolato/pydumpling/issues/13
 
 
 网络痕迹
