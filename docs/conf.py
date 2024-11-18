@@ -33,3 +33,5 @@ analytics_with = 'baidu'
 analytics_id = '37c9f06a6b652cc479be7a02e861ad8f'
 
 html_favicon = 'avatar.ico'
+
+pygments_style = "sphinx"
