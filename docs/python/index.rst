@@ -7,3 +7,4 @@ Python
     :maxdepth: 2
 
     python_data_model/index
+    python_some_tips/index
