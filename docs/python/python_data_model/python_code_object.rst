@@ -56,6 +56,7 @@ Python 数据模型之—— Code Object (代码对象)
 函数中使用的局部变量的数量（包括形参）。局部变量不仅包括函数内部定义的变量，还包括形参。
 
 .. code-block:: python
+    :linenos:
 
     def func(a, b):
         x = a + b
@@ -70,6 +71,7 @@ Python 数据模型之—— Code Object (代码对象)
 一个元组，包含了函数内所有局部变量的名称。它是按顺序列出的，形参排在前面，局部变量排在后面。
 
 .. code-block:: python
+    :linenos:
 
     def func(a, b):
         x = a + b
@@ -95,11 +97,12 @@ Python 数据模型之—— Code Object (代码对象)
 与 ``co_cellvars`` 相对应，``co_freevars`` 是指嵌套函数引用了外部作用域的变量。
 
 .. code-block:: python
+    :linenos:
 
     def outer():
-    a = 10
-    def inner():
-        print(a)  # a 是自由变量
+        a = 10
+        def inner():
+            print(a)  # a 是自由变量
 
 在 ``inner`` 函数的 ``codeobject.co_freevars`` 中，**a** 会被列出。
 
