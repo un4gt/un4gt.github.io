@@ -5,3 +5,4 @@ Python Some Tips
     :maxdepth: 1
 
     python_priority_queue
+    python_pipeline
