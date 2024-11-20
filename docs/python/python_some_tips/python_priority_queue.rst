@@ -115,7 +115,7 @@ Python 默认实现了一个优先级队列，但是它是一个最小堆。这�
     :emphasize-lines: 4
 
     def heappush_max(heap, item):
-    """Maxheap variant of heappush."""
+        """Maxheap variant of heappush."""
         heap.append(item)
         _siftdown_max(heap, 0, len(heap)-1)
 
