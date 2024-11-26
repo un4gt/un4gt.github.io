@@ -346,7 +346,7 @@ files = [
 
 [[package]]
 name = "sphinxcontrib-giscus"
-version = "0.0.1"
+version = "0.0.2"
 requires_python = ">=3.8"
 summary = "A sphinx extension that integrate Giscus to your sphinx doc"
 groups = ["default"]
@@ -354,8 +354,8 @@ dependencies = [
     "sphinx>=7.1.2",
 ]
 files = [
-    {file = "sphinxcontrib_giscus-0.0.1-py3-none-any.whl", hash = "sha256:1dc80da3b6dd486805a8a3ceb2c2a227d6c24f18dd0063673fd2ef3775250989"},
-    {file = "sphinxcontrib_giscus-0.0.1.tar.gz", hash = "sha256:9509f62cc2efe025b5296bdcc7824c0d730ce66bc8e50806f1f35b6683880e3e"},
+    {file = "sphinxcontrib_giscus-0.0.2-py3-none-any.whl", hash = "sha256:34ac0e894c355bea1f94d3f12bce780d7f601e86d55d874f3ece7d0d4671350d"},
+    {file = "sphinxcontrib_giscus-0.0.2.tar.gz", hash = "sha256:0361a1f5b57470bbac6abaecb0ba83df83e5a49f7d99d5c369287aa835bdc2b2"},
 ]
 
 [[package]]
