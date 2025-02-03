@@ -5,9 +5,6 @@ description = "Default template for PDM package"
 authors = [
     {name = "jennier0107", email = "mt3085570450@outlook.com"},
 ]
-dependencies = [
-    "sphinxcontrib-giscus>=0.0.1",
-]
 requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -29,4 +26,5 @@ doc = [
     "sphinx-tabs>=3.4.5",
     "sphinxcontrib-analytics-hub>=0.0.2",
     "sphinx-design>=0.6.1",
+    "sphinxcontrib-giscus>=0.0.3",
 ]
