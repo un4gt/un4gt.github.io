@@ -49,12 +49,14 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
 - :octicon:`project` `pycharm-like-snippets`_
 - :octicon:`package` `sphinxcontrib-analytics-hub`_
 - :octicon:`package` `sphinxcontrib-del-marker`_
+- :octicon:`package` `sphinxcontrib-giscus`_
 
 .. _flasky-cli: https://github.com/un4gt/flasky-cli
 .. _markdown-tools: https://github.com/un4gt/markdown-tools
 .. _pycharm-like-snippets: https://github.com/un4gt/pycharm-like-snippets
 .. _`sphinxcontrib-analytics-hub`: https://github.com/un4gt/sphinxcontrib-analytics-hub
 .. _`sphinxcontrib-del-marker`: https://github.com/sphinx-contrib/sphinxcontrib-del-marker
+.. _`sphinxcontrib-giscus`: https://github.com/un4gt/sphinxcontrib-giscus
 
 
 参与的开源项目
