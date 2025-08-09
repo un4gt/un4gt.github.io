@@ -11,12 +11,14 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
 [tool.pdm.scripts]
+autobuild = {shell = 'sphinx-autobuild docs/ docs/_build/html --watch-step 3000'}
 docs = {shell = "cd docs && make html -e"}  # build sphinx docs
-docs_p = {shell = 'python -m http.server -d docs/_build/html'}
 
 [tool.pdm.dev-dependencies]
 dev = [
+    "sphinx-autobuild @ git+https://github.com/un4gt/sphinx-autobuild.git@main",
 ]
 [project.optional-dependencies]
 doc = [
