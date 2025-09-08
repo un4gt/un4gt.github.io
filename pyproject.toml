@@ -13,7 +13,7 @@ license = {text = "MIT"}
 distribution = false
 
 [tool.pdm.scripts]
-autobuild = {shell = 'sphinx-autobuild docs/ docs/_build/html --watch-step 3000'}
+autobuild = {shell = 'sphinx-autobuild docs/ docs/_build/html --watch-step 2000'}
 docs = {shell = "cd docs && make html -e"}  # build sphinx docs
 
 [tool.pdm.dev-dependencies]
