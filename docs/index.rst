@@ -20,8 +20,6 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
 
 - :octicon:`sync` [Fine Weather] `添加 EmojiReaction 组件`
 
-- .. del:: 忙着毕业论文+毕设
-
 - :octicon:`sync`  给 [`Flasky-Cli`_] 添加实用性强的新功能，比如快速注册一个蓝图
 
 - .. del:: :octicon:`git-merge`  为 [`BiliFM`_] 添加下载音质的 CLI 选项
@@ -88,5 +86,6 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
    nodejs/index
    rust/index
    wasm/index
+   c/index
    daily/index
    articles_videos/index
