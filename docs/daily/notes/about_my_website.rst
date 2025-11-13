@@ -205,7 +205,7 @@ Sphinx 所使用的 reStructuredText 标准中，无法实现与 HTML Del 元素
 
 最终呈现的效果如下：
 
-.. image:: https://tumuer.me/website_preview.png
+.. image:: https://images.tumuer.me/website_preview.png
     :alt: Website Preview
 
 
@@ -244,14 +244,14 @@ Sphinx 所使用的 reStructuredText 标准中，无法实现与 HTML Del 元素
 
 只需在页面上方插入该指令即可：
 
-.. image:: https://tumuer.me/giscus_on_directive.png
+.. image:: https://images.tumuer.me/giscus_on_directive.png
     :alt: Giscus On Directive
 
 
 
 最终呈现的效果如下：
 
-.. image:: https://tumuer.me/20250809173527510.png
+.. image:: https://images.tumuer.me/20250809173527510.png
     :alt: Giscus Comments
 
 

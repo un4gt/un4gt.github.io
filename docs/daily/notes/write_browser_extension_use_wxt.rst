@@ -190,7 +190,7 @@ chrome/edge 和 firefox 要求扩展图表提供多个不同的尺寸，确定�
 
 可以再任意在线网页中点击右键菜单进行唤醒：
 
-.. image:: https://tumuer.me/copy-as-url-preview
+.. image:: https://images.tumuer.me/copy-as-url-preview
     :alt: copy-as-url 效果演示
 
 

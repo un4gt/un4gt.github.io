@@ -124,5 +124,5 @@ csv 解析器实现
 
 打开 ``target/criterion/report/index.html`` ：
 
-.. image:: https://tumuer.me/cargo_bench_criterion_html_resport.png
+.. image:: https://images.tumuer.me/cargo_bench_criterion_html_resport.png
     :alt: cargo bench criterion html report
