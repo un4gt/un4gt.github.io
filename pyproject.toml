@@ -5,7 +5,7 @@ description = "my blog"
 authors = [
     {name = "jennier0107", email = "mt3085570450@outlook.com"},
 ]
-requires-python = ">=3.13, <4"
+requires-python = ">=3.11, <4"
 readme = "README.md"
 license = {text = "MIT"}
 dependencies = [
