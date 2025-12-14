@@ -1,3 +1,8 @@
+:giscus-on:
+:date: 2025-12-15
+:author: Tz
+
+
 使用 `WXT <https://wxt.dev/>`_ 来构建一个浏览器扩展
 ###########################################################
 
@@ -153,14 +158,14 @@ After:
         })
     }
 
-之所以使用 ``browser.scripting.executeScript`` 去实现向系统剪切板写入，因为在 backgroud.js 环境中， ``navigator.clipboard`` 结果是 ``undefined``, 
+之所以使用 ``browser.scripting.executeScript`` 去实现向系统剪切板写入，因为在 backgroud.js 环境中， ``navigator.clipboard`` 结果是 ``undefined``,
 该 API 只能在 ``scripting.executeScript`` 时能够正常使用。
 
 
 扩展的 icon 处理
 ********************
 
-chrome/edge 和 firefox 要求扩展图表提供多个不同的尺寸，确定号一个 icon 之后，使用网页工具生成了不同尺寸的 icon, 
+chrome/edge 和 firefox 要求扩展图表提供多个不同的尺寸，确定号一个 icon 之后，使用网页工具生成了不同尺寸的 icon,
 不过总有那么一个尺寸，工具不支持或者需要注册并付费再能下载。幸好，WXT 官方提供了一个工具 `@wxt-dev/auto-icons <https://www.npmjs.com/package/@wxt-dev/auto-icons>`_ ，
 只需提供一个正常尺寸（如 128x128）, 该工具自动生成目标浏览器所需要的所有尺寸的图表。
 
@@ -195,4 +200,3 @@ chrome/edge 和 firefox 要求扩展图表提供多个不同的尺寸，确定�
 
 
 同样，在图片上右键菜单也是同样的效果。
-

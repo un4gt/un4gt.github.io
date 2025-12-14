@@ -1,4 +1,9 @@
-使用 ``criterion`` 库 进行 benchmark 
+:giscus-on:
+:date: 2025-12-15
+:author: Tz
+
+
+使用 ``criterion`` 库 进行 benchmark
 ###########################################
 
 刚开始学 python 时，很喜欢使用自带的 `timeit  <https://docs.python.org/3/library/timeit.html>`_ 库测量自己写的代码的执行时间。

@@ -1,7 +1,12 @@
+:giscus-on:
+:date: 2025-12-15
+:author: Tz
+
+
 使用 `RsProxy <https://rsproxy.cn/>`_ 在 Windows 上设置镜像
 ##############################################################
 
-每次更新 rust toolchains 时，不管有没有开加速器，相关的下载很慢。幸好找到了网站 `RsProxy <https://rsproxy.cn/>`_ 
+每次更新 rust toolchains 时，不管有没有开加速器，相关的下载很慢。幸好找到了网站 `RsProxy <https://rsproxy.cn/>`_
 提供了一个免费且稳定的国内镜像。
 
 网站只提供了 linux 或 macos 的设置方法，于是稍微查找相关文档，掌握了如何在 windows 上实现类似 linux 的
@@ -69,5 +74,3 @@ powershell 上的配置比 commandline 更为简单一些。
 
     $env:RUSTUP_DIST_SERVER="https://rsproxy.cn"
     $env:RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
-
-    

@@ -1,4 +1,7 @@
 :giscus-on:
+:date: 2025-12-15
+:author: Tz
+
 
 Python 中管道模式——通过重载运算符实现
 =======================================
@@ -40,15 +43,15 @@ Python  中的 ``|`` 符，对应的是魔术方法 ``__or__``。我们可以通
     def compose(*functions: Callable) -> Any:
         """Composes functions into a single function"""
         return reduce(lambda f, g: lambda x: g(f(x)), functions, lambda x: x)
-        
+
     class PipeLine:
-    
+
         funcs = []
-        
+
         def __or__(self, value: Any) -> Any:
             self.funcs.append(value)
             return self
-        
+
         def __call__(self, *args: Any, **kwargs: Any) -> Any:
             return compose(*self.funcs)(*args, **kwargs)
 
@@ -129,19 +132,19 @@ Python  中的 ``|`` 符，对应的是魔术方法 ``__or__``。我们可以通
     :emphasize-lines: 1, 3, 4, 6
 
     class PipeLineMeta(type):
-    
+
         def __or__(cls, p: Callable) ->'PipeLine':
             return cls() | p
 
     class PipeLine(metaclass=PipeLineMeta):
-    
+
         funcs = []
-        
-        
+
+
         def __or__(self, value: Any) -> Any:
             self.funcs.append(value)
             return self
-        
+
         def __call__(self, *args: Any, **kwargs: Any) -> Any:
             return compose(*self.funcs)(*args, **kwargs)
 

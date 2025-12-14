@@ -1,4 +1,7 @@
 :giscus-on:
+:date: 2025-12-15
+:author: Tz
+
 
 Python PriorityQueue —— 优先队列
 ====================================
@@ -28,7 +31,7 @@ Python 默认实现了一个优先级队列，但是它是一个最小堆。这�
 如果我们运行上面的代码，我们会得到：
 
 .. code-block:: console
-    
+
     q3
 
     (20, 'code')
@@ -61,12 +64,12 @@ Python 默认实现了一个优先级队列，但是它是一个最小堆。这�
         def _put(self, item):
             item = (-item[0], item[1])
             super()._put(item)
-            
+
         def _get(self):
             poped = super()._get()
             return (-poped[0], poped[1])
 
-        
+
 一个简单的示例代码：
 
 .. code-block:: python

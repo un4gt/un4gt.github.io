@@ -1,4 +1,6 @@
 :giscus-on:
+:date: 2025-12-15
+:author: Tz
 
 解决使用Rust与Sqlite3交互时出现 LNK1181 错误
 ============================================
@@ -10,12 +12,12 @@
 ------------------------------------
 
 1. 在 `SQLite Download Page`_ 中分别下载以下3个文件
-   
+
    * sqlite-amalgamation-xxxx.zip
    * sqlite-dll-win-x64-xxxx.zip （如果是 x86, 请下载sqlite-dll-win-x86-xxxxx.zip）
    * sqlite-tools-win-x64-xxxxx.zip
 2. 将以上三个压缩包解压至一个目录内，并打开 **Developer Command Prompt for VS xxxx**，并运行以下命令：
-   
+
    .. tabs::
 
     .. group-tab:: windows x86

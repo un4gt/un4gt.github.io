@@ -12,6 +12,7 @@ extensions = [
     "sphinx_design",
     "sphinxcontrib_giscus",
     "sphinxcontrib_friendlinks",
+    "sphinxfeed",
 ]
 
 templates_path = ["_templates"]
@@ -44,3 +45,18 @@ data_repo = "un4gt/un4gt.github.io"
 data_repo_id = "R_kgDOLqJB9g"
 data_category = "Announcements"
 data_category_id = "DIC_kwDOLqJB9s4CjTar"
+
+
+# --- Sphinxfeed 配置 ---
+
+feed_base_url = "https://tumuer.me"
+
+feed_author = "Tz"
+
+feed_description = "Hello! 我是un4gt, 一个 web 开发者和开源爱好者"
+
+feed_field_name = "date"
+
+feed_use_atom = False
+
+use_dirhtml = False

@@ -1,4 +1,6 @@
 :giscus-on:
+:date: 2025-12-15
+:author: Tz
 
 我是如何搭建该个人网站的
 ===============================
@@ -26,7 +28,7 @@
 
 - `Sphinx`_ 官方文档
 - `reStructuredText`_ 文档
-- `Sphinx + Read the Docs 从懵逼到入门`_ 
+- `Sphinx + Read the Docs 从懵逼到入门`_
 
 
 .. _reStructuredText: https://sublime-and-sphinx-guide.readthedocs.io/en/latest/index.html
@@ -316,7 +318,7 @@ sphinx 本身不提供类似其他工具的热更新或者内置服务器功能�
 存放静态资源
 -----------------
 
-担心存放过多的图片或者视频等静态资源，导致 github 账号被封禁，所以我将这些资源放到 `Cloudflare R2` 中。在写作时可以使用 `PicGo`_ 
+担心存放过多的图片或者视频等静态资源，导致 github 账号被封禁，所以我将这些资源放到 `Cloudflare R2` 中。在写作时可以使用 `PicGo`_
 等工具，上传图片并获取图片链接后嵌入到文档即可。
 
 以下是我参考的一些文章：
