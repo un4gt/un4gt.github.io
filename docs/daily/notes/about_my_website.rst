@@ -40,11 +40,11 @@ Github Actions 集成
 在文档 `Appendix: Deploying a Sphinx project online <https://www.sphinx-doc.org/en/master/tutorial/deploying.html>`_ 中，介绍了如何将 Sphinx 项目部署到线上环境，包括使用 Github Actions 进行自动化部署的配置示例。
 
 
-在此基础上，我们需要进行一些改进。首先，构建 sphinx 文档需要 python 环境，而管理 python 环境中的依赖，当前选择的是 `PDM`_ 。
+在此基础上，我们需要进行一些改进。首先，构建 sphinx 文档需要 python 环境，而管理 python 环境中的依赖，这里我选择的是 `uv`_ 。
 
-.. _PDM: https://pdm-project.org/en/latest/
+.. _uv: https://docs.astral.sh/uv/
 
-使用 Pdm 官方提供的 actions 来配置 python 和 本身：
+使用 `uv` 来配置依赖安装（示例以 GitHub Actions 为例）：
 
 .. code-block:: yaml
 
@@ -52,27 +52,25 @@ Github Actions 集成
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Setup PDM
-      uses: pdm-project/setup-pdm@v4
+    - name: Install uv
+      run: curl -LsSf https://astral.sh/uv/install.sh | sh
     - name: Install dependencies
-      run: pdm install -G doc
+      run: ~/.local/bin/uv sync --extra doc --frozen --no-dev
 
-不需要手动配置 Python 环境，PDM 会自动处理。
+uv 会自动创建/复用项目中的 `.venv`，并根据 `uv.lock` 安装依赖。
 
-同时，我们需要在 pyproject.toml 中配置 Sphinx 相关的构建命令，以便在 CI/CD 流水线中调用。
+同时，CI/CD 中可以直接用 `uv run` 来执行 Sphinx 构建命令（本仓库本地开发也提供了 `scripts\\*.cmd` 脚本）。
 
-.. code-block:: toml
+.. code-block:: shell
 
-    [tool.pdm.scripts]
-    autobuild = {shell = 'sphinx-autobuild docs/ docs/_build/html --watch-step 3000'}
-    docs = {shell = "cd docs && make html -e"}  # build sphinx docs
+    uv run --no-dev sphinx-build -M html docs docs/_build
 
 将其添加到 github actions 的工作流中：
 
 .. code-block:: yaml
 
    - name: Make html
-      run: pdm run docs
+      run: uv run --no-dev sphinx-build -M html docs docs/_build
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       id: deployment
@@ -98,12 +96,12 @@ Github Actions 集成
             runs-on: ubuntu-latest
             steps:
             - uses: actions/checkout@v4
-            - name: Setup PDM
-            uses: pdm-project/setup-pdm@v4
+            - name: Install uv
+            run: curl -LsSf https://astral.sh/uv/install.sh | sh
             - name: Install dependencies
-            run: pdm install -G doc
+            run: ~/.local/bin/uv sync --extra doc --frozen --no-dev
             - name: Make html
-            run: pdm run docs
+            run: ~/.local/bin/uv run --no-dev sphinx-build -M html docs docs/_build
             - name: Upload artifact
             uses: actions/upload-pages-artifact@v3
             id: deployment
@@ -222,11 +220,11 @@ Sphinx 所使用的 reStructuredText 标准中，无法实现与 HTML Del 元素
 
 .. _giscus: https://giscus.app/
 
-首先，通过 PDM 或者 Uv 之类的工具进行安装：
+首先，通过 uv 进行安装（将依赖添加到 `doc` extra 中）：
 
 .. code-block:: shell
 
-    pdm add sphinxcontrib-giscus
+    uv add --optional doc sphinxcontrib-giscus
 
 
 
@@ -283,14 +281,14 @@ Sphinx 所使用的 reStructuredText 标准中，无法实现与 HTML Del 元素
 
 sphinx 本身不提供类似其他工具的热更新或者内置服务器功能，所以文档进行变动时，需要手动进行构建，并使用一些 http 服务进行预览。
 
-比如，下面是我基于 PDM 脚本，写的两个命令：
+比如，下面是我基于 Windows 下的 `.cmd` 脚本，写的两个命令：
 
-.. code-block:: toml
+.. code-block:: bat
 
-    docs = {shell = "cd docs && make html -e"}  # build sphinx docs
-    docs_p = {shell = 'python -m http.server -d docs/_build/html'}
+    scripts\\docs.cmd
+    scripts\\serve.cmd
 
-`docs` 命令负责构建，`docs_p` 命令负责预览。
+`docs` 负责构建，`serve` 负责热更新预览。
 
 直到我在 github 上搜到一个项目 `sphinx-autobuild`_, 让这个过程变得更加简单了。
 
@@ -298,10 +296,9 @@ sphinx 本身不提供类似其他工具的热更新或者内置服务器功能�
 
 只需将上面的命令换成：
 
-.. code-block:: toml
+.. code-block:: shell
 
-    ...
-    autobuild = {shell = 'sphinx-autobuild docs/ docs/_build/html --watch-step 3000'}
+    uv run sphinx-autobuild docs/ docs/_build/html --watch-step 3000
 
 * `docs/` 是源文件目录
 * `docs/_build/html` 是构建输出目录
@@ -340,4 +337,3 @@ sphinx 本身不提供类似其他工具的热更新或者内置服务器功能�
 从最基础简陋的个人网站到现在，过程有些小挫折，但是最后实现下来，还是有点小成就感的。
 
 不过，让我重新选择，我可能会选择 `Mkdocs <https://www.mkdocs.org/>`_ 来搭建，因为它基于 markdown 格式，同时插件生态更丰富。
-

@@ -1,27 +1,14 @@
 [project]
 name = "jennier0107.github.io"
 version = "0.1.0"
-description = "Default template for PDM package"
+description = "my blog"
 authors = [
     {name = "jennier0107", email = "mt3085570450@outlook.com"},
 ]
-requires-python = "==3.11.*"
+requires-python = ">=3.13, <4"
 readme = "README.md"
 license = {text = "MIT"}
-
-[tool.pdm]
-distribution = false
-
-[tool.pdm.scripts]
-autobuild = {shell = 'sphinx-autobuild docs/ docs/_build/html --watch-step 2000'}
-docs = {shell = "cd docs && make html -e"}  # build sphinx docs
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "sphinx-autobuild @ git+https://github.com/un4gt/sphinx-autobuild.git@main",
-]
-[project.optional-dependencies]
-doc = [
+dependencies = [
     "sphinx>=7.3.7",
     "sphinxawesome-theme>=5.2.0",
     "sphinxcontrib-del-marker>=0.1.2",
@@ -29,4 +16,10 @@ doc = [
     "sphinxcontrib-analytics-hub>=0.0.2",
     "sphinx-design>=0.6.1",
     "sphinxcontrib-giscus>=0.0.3",
+    "sphinxcontrib-friendlinks>=0.1.2",
+]
+
+[dependency-groups]
+dev = [
+    "sphinx-autobuild @ git+https://github.com/un4gt/sphinx-autobuild.git@main",
 ]

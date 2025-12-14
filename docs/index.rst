@@ -89,3 +89,4 @@ Hello! 我是un4gt, 一个 web 开发者和开源爱好者
    c/index
    daily/index
    articles_videos/index
+   friendlinks/index

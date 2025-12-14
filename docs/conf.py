@@ -11,6 +11,7 @@ extensions = [
     "sphinxcontrib_analytics_hub",
     "sphinx_design",
     "sphinxcontrib_giscus",
+    "sphinxcontrib_friendlinks",
 ]
 
 templates_path = ["_templates"]
